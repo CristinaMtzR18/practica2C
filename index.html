@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mercadito Libre - Inicio</title>
+  <!-- Bootstrap CSS (INTENTIONAL: wrong integrity attribute name and duplicated link) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <!-- INTENTIONAL: missing description meta -->
+</head>
+
+<body>
+  <!-- NAVBAR (INTENTIONAL: duplicate id, misplaced classes) -->
+  <nav id="mainNav" id="duplicatedId" class="navbar navbar-expand-lg bg-body-tertiary navbar-dark bg-dark sticky-topx">
+    <div class="container-fluids"> <!-- INTENTIONAL: misspelled class -->
+      <a class="navbar-brand d-flex gap-2 align-items-center" href="#">
+        <img src="https://images.unsplash.com/photo-1556741533-f6acd647b810?w=40" width="32" height="32">
+        Mercadito<strong>Libre</strong>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- INTENTIONAL: target/id mismatch -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="categories.html">Categorías</a></li>
+          <li class="nav-item"><a class="nav-link" href="product.html">Producto</a></li>
+          <li class="nav-item"><a class="nav-link" href="cart.html">Carrito</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contacto</a></li>
+        </ul>
+        <!-- Search (INTENTIONAL: wrong form role) -->
+        <form class="d-flex" role="research">
+          <input class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO with Carousel (advanced) -->
+  <header class="container-fluid py-3">
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carosuel"> <!-- INTENTIONAL: typo in data attribute -->
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner rounded-3 overflow-hidden shadow-sm">
+        <div class="carousel-item active">
+          <img class="d-block w-100 object-fit-cover" height="420"
+            src="https://images.unsplash.com/photo-1515165562835-c3b8c8e69e1d?w=1400&q=80" alt="">
+          <div class="carousel-caption text-start">
+            <h1>Ofertas relámpago</h1>
+            <p>Descuentos en electrónica hasta -70%*</p>
+            <p><a class="btn btn-lg btn-primary" href="categories.html#electronica">Ver electrónica</a></p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 object-fit-cover" height="420"
+            src="https://images.unsplash.com/photo-1520975599930-b0b8f92d6e6a?w=1400&q=80" alt="">
+          <div class="carousel-caption">
+            <h1>Ropa y Moda</h1>
+            <p>Descubre lo último en tendencias.</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img class="d-block w-100 object-fit-cover" height="420"
+            src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=1400&q=80" alt>
+          <div class="carousel-caption">
+            <h1>Hogar</h1>
+            <p>Renueva tus espacios con estilo.</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarrousel" data-bs-slide="prev">
+        <!-- INTENTIONAL: wrong id -->
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-shown">Anterior</span> <!-- INTENTIONAL: wrong helper class -->
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CATEGORIES (at least 5) -->
+  <section class="container my-5" id="categorias">
+    <div class="row g-3">
+      <div class="col-12">
+        <h2 class="h3 text-center mb-4">Categorías populares</h2>
+      </div>
+      <!-- INTENTIONAL: using wrong grid breakpoints and mixed columns -->
+      <div class="col-sm-6 col-md-4 col-lg-2 col-mb-3">
+        <a href="categories.html#electronica" class="text-decoration-none">
+          <div class="card h-100 hover-shadow-sm">
+            <img src="https://images.unsplash.com/photo-1518779578993-ec3579fee39f?w=600&q=80" class="card-img-top"
+              alt="Electronica">
+            <div class="card-body">
+              <h3 class="h6">Electrónica</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <a href="categories.html#moda" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1520975657287-5f218a37f247?w=600&q=80" class="card-img-top"
+              alt="Moda">
+            <div class="card-body">
+              <h3 class="h6">Moda</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <a href="categories.html#hogar" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&q=80" class="card-img-top"
+              alt="Hogar">
+            <div class="card-body">
+              <h3 class="h6">Hogar</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <a href="categories.html#deportes" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1551958219-acbc608c6377?w=600&q=80" class="card-img-top"
+              alt="Deportes">
+            <div class="card-body">
+              <h3 class="h6">Deportes</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <a href="categories.html#juguetes" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1585386959984-a41552231658?w=600&q=80" class="card-img-top"
+              alt="Juguetes">
+            <div class="card-body">
+              <h3 class="h6">Juguetes</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="col-sm-6 col-md-4 col-lg-2">
+        <a href="categories.html#libros" class="text-decoration-none">
+          <div class="card h-100">
+            <img src="https://images.unsplash.com/photo-1514894780887-121968d00567?w=600&q=80" class="card-img-top"
+              alt="Libros">
+            <div class="card-body">
+              <h3 class="h6">Libros</h3>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURED PRODUCTS (Cards + Modal + Toast) -->
+  <section class="container my-5" id="destacados">
+    <div class="d-flex justify-content-between align-items-center mb-3">
+      <h2 class="h3">Destacados</h2>
+      <!-- Offcanvas trigger (advanced) -->
+      <button class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#filters">Filtros</button>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      <!-- INTENTIONAL: duplicate ids for modal and wrong aria-labelledby -->
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1510557880182-3d4d3cba35a5?w=800&q=80" class="card-img-top"
+            alt="Laptop Pro X">
+          <div class="card-body">
+            <h5 class="card-title">Laptop Pro X</h5>
+            <p class="card-text">Potencia para todo. 16GB RAM, 1TB SSD.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productModal">Detalles</button>
+            <button class="btn btn-outline-secondary" id="addToCartBtn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=800&q=80" class="card-img-top"
+            alt="Sneakers Neo">
+          <div class="card-body">
+            <h5 class="card-title">Sneakers Neo</h5>
+            <p class="card-text">Comodidad y estilo para diario.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productModal">Detalles</button>
+            <button class="btn btn-outline-secondary" id="addToCartBtn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="col">
+        <div class="card h-100">
+          <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=800&q=80" class="card-img-top"
+            alt="Auriculares Wave">
+          <div class="card-body">
+            <h5 class="card-title">Auriculares Wave</h5>
+            <p class="card-text">Cancelación de ruido activa.</p>
+            <button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#productModal">Detalles</button>
+            <button class="btn btn-outline-secondary" id="addToCartBtn">Añadir al carrito</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal (duplicated id intentionally) -->
+    <div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productTitle" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="productTitle">Título de Producto</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+          </div>
+          <div class="modal-body">
+            <p>Detalles del producto. (INTENTIONAL: contenido repetido en cada card)</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            <a href="product.html" class="btn btn-primary">Ir a la ficha</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast (advanced) -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="cartToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive"
+        aria-atomic="true">
+        <div class="d-flex">
+          <div class="toast-body">Producto añadido al carrito</div>
+          <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+            aria-label="Close"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Offcanvas Filters -->
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="filters" aria-labelledby="filtersLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="filtersLabel">Filtros</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body">
+      <div class="accordion" id="filterAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseTwo"> <!-- INTENTIONAL: aria-controls mismatch -->
+              Precio
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+            data-bs-parent="#filterAccordion">
+            <div class="accordion-body">
+              <input type="range" class="form-range" min="0" max="1000" step="10">
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Categoría
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+            data-bs-parent="#filterAccordion">
+            <div class="accordion-body">
+              <select class="form-select">
+                <option>Electrónica</option>
+                <option>Moda</option>
+                <option>Hogar</option>
+                <option>Deportes</option>
+                <option>Juguetes</option>
+                <option>Libros</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER (INTENTIONAL: wrong semantic structure and copyright symbol) -->
+  <footer class="bg-dark text-light mt-5 p-4">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>Mercadito Libre</h5>
+          <p>Tu e-commerce favorito. Envíos a todo México.</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Enlaces</h5>
+          <ul class="list-unstyled">
+            <li><a class="link-light" href="privacy.html">Privacidad</a></li>
+            <li><a class="link-light" href="#">Términos</a></li>
+            <li><a class="link-light" href="#">Ayuda</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Suscríbete</h5>
+          <form class="d-flex gap-2">
+            <input type="email" class="form-control" placeholder="Tu correo">
+            <button class="btn btn-warning" type="submit">Enviar</button>
+          </form>
+        </div>
+      </div>
+      <p class="mt-3 small">© 2025 Mercadito Libre - Todos los derechos reservadosr</p> <!-- INTENTIONAL: typo -->
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS (INTENTIONAL: wrong order and missing Popper attr is ok in v5) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+  <!-- Minimal JS to show toast (INTENTIONAL: querySelectorAll same id and no event delegation) -->
+  <script>
+    document.querySelectorAll('#addToCartBtn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        const toastEl = document.getElementById('cartToast');
+        const toast = new bootstrap.Toast(toastEl, { delay: 1200 });
+        toast.show();
+      })
+    })
+  </script>
+</body>
+
+</html>

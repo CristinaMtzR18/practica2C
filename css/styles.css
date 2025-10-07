@@ -1,0 +1,36 @@
+/* INTENTIONAL: several CSS mistakes to fix */
+:root{
+  --brand: #0d6efd;
+  --brand-contrst: #ffffff; /* typo */
+}
+
+body{
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background-colorr: #f8f9fa; /* typo */
+}
+
+.navbar-brand img{
+  border-radius: 8px;
+}
+
+.hover-shadow-sm:hover{
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+  transform: translateY(-2px);
+  transition: all .2s ease-in-out; /* misplaced: should be on default state */
+}
+
+.card-tilte{ /* typo: should be .card-title */
+  font-weight: 700;
+}
+
+#duplicatedId{
+  outline: 3px dashed tomato;
+}
+
+/* Bad specificity & duplicate id again */
+#productTitle{
+  color: var(--brand);
+}
+#productTitle{
+  color: red;
+}
